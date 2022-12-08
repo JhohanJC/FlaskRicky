@@ -1,0 +1,40 @@
+{% extends "base.html" %} {% block content %}
+<h1>Lista de Personajes</h1>
+<a class="btn btn-warning" href="{{ url_for('bp_ricky.perfil') }}">regresar</a>
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>image</th>
+        <th>status</th>
+        <th>species</th>
+        <th>location_name</th>
+        <th>origin_name</th>
+        <th>más caracteristicas</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for ricky in rickys %}
+      <tr>
+        <td>{{ ricky.id }}</td>
+        <td>{{ ricky.name }}</td>
+        <td><img src="{{ricky.image}}" width="200" /></td>
+        <td>{{ ricky.status }}</td>
+        <td>{{ ricky.species }}</td>
+        <td>{{ ricky.location_name }}</td>
+        <td>{{ ricky.origin_name }}</td>
+        <td>
+          <a
+            class="btn btn-warning"
+            href="{{url_for('bp_ricky.show_ricky', id=ricky.id)}}"
+            >Episodes or more details</a
+          >
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

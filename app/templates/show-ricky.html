@@ -1,0 +1,18 @@
+<a class="btn btn-warning" href="{{ url_for('bp_ricky.perfil') }}">regresar</a>
+{% for k in datos %}
+<h1>ID: {{k.id}}, Name: {{k.name}}</h1>
+<img src="{{k.image}}" width="200" />
+<h3>Status: {{k.status}}</h3>
+<h3>Species: {{k.species}}</h3>
+<h3>Type: {{k.typee}}</h3>
+<h3>Type: {{k.gender}}</h3>
+<h3>origin_name: {{k.origin_name}}</h3>
+<h3>Location_name: {{k.location_name}}</h3>
+<h3>Dimension: {{k.dimension}}</h3>
+<h3>Created: {{k.created}}</h3>
+<h2>Episodes o capitulos</h2>
+<h3>Episode_id: {{k.episode_id}}</h3>
+<h3>Episode_name: {{k.episode_name}}</h3>
+<h3>Episode_air_date: {{k.episode_air_date}}</h3>
+<h3>Episode: {{k.episode}}</h3>
+{% endfor %}
