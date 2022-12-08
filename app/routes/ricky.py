@@ -23,7 +23,7 @@ def store_ricky():
     
     rango=list(range(1,3,1))# probar de uno a tres
     # rango=list(range(2,0,-1))# 
-    rango=list(range(420,0,-1))# para extraer información de page=1 a page=21, total ID=420
+    # rango=list(range(420,0,-1))# para extraer información de page=1 a page=21, total ID=420
     lectura=f'https://rickandmortyapi.com/api/character/{rango}'
     resp = requests.get(lectura)
     dator=resp.json()
